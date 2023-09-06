@@ -20,7 +20,7 @@ public class UserDaoJDBCImpl implements UserDao {
                     "name VARCHAR(255), " +
                     "lastName VARCHAR(255), " +
                     "age INT)");
-
+            connection.setAutoCommit(false);
             System.out.println("Таблица создана");
         } catch (SQLException e) {
             e.printStackTrace();
